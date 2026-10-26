@@ -1,0 +1,41 @@
+name: Neocloud Meltdown
+slug: neocloud-meltdown
+order: 1
+created: 2026-10-25
+inception: 2026-10-23
+event_date: 2026-10-01
+event_label: Debt markets shut
+backfill_start: 2024-10-01
+min_coverage: 0.6
+benchmark: QQQ
+benchmarks:
+  - QQQ
+  - SPY
+color: "#ffb000"
+note: Debt markets shut off for companies without revenue independent of AI data centers; consolidation of 200+ neoclouds.
+constituents:
+  - { symbol: SLNH, name: Soluna }
+  - { symbol: BRUN, name: Boost Run }
+  - { symbol: BTBT, name: Bit Digital }
+  - { symbol: WYFI, name: WhiteFiber }
+  - { symbol: SHAZ, name: Sharon AI }
+  - { symbol: DGXX, name: Digi Power X }
+  - { symbol: CIFR, name: Cipher Mining }
+  - { symbol: AIBZ, name: Bitzero }
+  - { symbol: BTDR, name: Bitdeer }
+  - { symbol: HIVE, name: Hive Digital }
+  - { symbol: NUAI, name: New Era Digital }
+  - { symbol: IREN, name: IREN }
+  - { symbol: MARA, name: MARA }
+  - { symbol: GLXY, name: Galaxy Digital }
+  - { symbol: APLD, name: Applied Digital }
+  - { symbol: CLSK, name: CleanSpark }
+  - { symbol: WULF, name: TeraWulf }
+  - { symbol: CRWV, name: CoreWeave }
+  - { symbol: RIOT, name: Riot Platforms }
+  - { symbol: CORZ, name: Core Scientific }
+  - { symbol: HUT, name: Hut 8 }
+  - { symbol: ORCL, name: Oracle }
+  - { symbol: GDS, name: GDS Holdings }
+  - { symbol: NBIS, name: Nebius }
+  - { symbol: SPCX, name: SpaceX }

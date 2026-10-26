@@ -1,0 +1,79 @@
+name: Update data and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # After the US close. UTC Tue-Sat = Mon-Fri evening in New York.
+    - cron: "30 0 * * 2-6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-build-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Update market data
+        id: data
+        continue-on-error: true
+        run: npm run data:update
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update market data [skip ci]"
+            git push
+          else
+            echo "No data changes"
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if the data refresh failed
+        if: steps.data.outcome == 'failure'
+        run: |
+          echo "::error::Market data refresh failed. The site was deployed with the last committed data."
+          exit 1

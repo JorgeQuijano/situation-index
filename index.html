@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal terminal for tracking custom market baskets and the situations that created them."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#08090a" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <title>Situation Index</title>
+    <script>
+      (function () {
+        try {
+          var forced = new URLSearchParams(location.search).get("theme");
+          var choice = forced === "terminal" || forced === "paper" ? forced : localStorage.getItem("si-theme") || "system";
+          var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = choice === "system" ? (systemDark ? "terminal" : "paper") : choice;
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme === "terminal" ? "dark" : "light";
+        } catch (error) {
+          document.documentElement.dataset.theme = "terminal";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

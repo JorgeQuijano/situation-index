@@ -1,0 +1,54 @@
+name: Photonics
+slug: photonics
+order: 3
+created: 2026-10-03
+inception: 2026-10-05
+backfill_start: 2021-10-01
+min_coverage: 0.6
+benchmark: SMH
+benchmarks:
+  - SMH
+  - SPY
+color: "#c084fc"
+note: Photonics, optical components and semiconductor equipment basket.
+constituents:
+  - { symbol: IQE.L, ticker: IQE, name: IQE }
+  - { symbol: SIVE.ST, ticker: SIVE, name: Sivers Semiconductors }
+  - { symbol: SOI.PA, ticker: SOI, name: Soitec }
+  - { symbol: AXTI, name: AXT Inc }
+  - { symbol: AEHR, name: Aehr Test Systems }
+  - { symbol: UMC, name: United Microelectronics }
+  - { symbol: AAOI, name: Applied Optoelectronics }
+  - { symbol: OPTX, name: Syntec Optics }
+  - { symbol: MRVL, name: Marvell Technology }
+  - { symbol: COHU, name: Cohu }
+  - { symbol: ASX, name: ASE Technology }
+  - { symbol: ALRIB.PA, ticker: ALRIB, name: Riber }
+  - { symbol: VIAV, name: Viavi Solutions }
+  - { symbol: SMTC, name: Semtech }
+  - { symbol: FORM, name: FormFactor }
+  - { symbol: LITE, name: Lumentum }
+  - { symbol: STM, name: STMicroelectronics }
+  - { symbol: GFS, name: GlobalFoundries }
+  - { symbol: AIXA.DE, ticker: AIXA, name: Aixtron }
+  - { symbol: TER, name: Teradyne }
+  - { symbol: MTSI, name: MACOM Technology }
+  - { symbol: ONTO, name: Onto Innovation }
+  - { symbol: AMAT, name: Applied Materials }
+  - { symbol: TSEM, name: Tower Semiconductor }
+  - { symbol: WOLF, name: Wolfspeed }
+  - { symbol: VECO, name: Veeco Instruments }
+  - { symbol: HIMX, name: Himax Technologies }
+  - { symbol: COHR, name: Coherent }
+  - { symbol: LWLG, name: Lightwave Logic }
+  - { symbol: LRCX, name: Lam Research }
+  - { symbol: CIEN, name: Ciena }
+  - { symbol: SANM, name: Sanmina }
+  - { symbol: CRDO, name: Credo Technology }
+  - { symbol: TECK, name: Teck Resources }
+  - { symbol: AMKR, name: Amkor Technology }
+  - { symbol: XFAB.PA, ticker: XFAB, name: X-FAB }
+  - { symbol: POET, name: POET Technologies }
+  - { symbol: LASR, name: nLIGHT }
+  - { symbol: FN, name: Fabrinet }
+  - { symbol: LPTH, name: LightPath Technologies }

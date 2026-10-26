@@ -1,0 +1,41 @@
+name: Brazil Stocks
+slug: brazil-stocks
+order: 2
+created: 2026-10-05
+inception: 2026-10-05
+backfill_start: 2021-10-01
+min_coverage: 0.6
+benchmark: EWZ
+benchmarks:
+  - EWZ
+  - SPY
+color: "#2dd4bf"
+note: Brazil equities basket (US-listed ADRs).
+constituents:
+  - { symbol: XP, name: XP }
+  - { symbol: PICS, name: PicPay }
+  - { symbol: STNE, name: StoneCo }
+  - { symbol: INTR, ticker: INTER, name: Inter & Co }
+  - { symbol: PAGS, name: PagBank }
+  - { symbol: BBD, name: Bradesco }
+  - { symbol: AGBK, name: Agibank }
+  - { symbol: SBS, name: Sabesp }
+  - { symbol: ITUB, name: Itaú Unibanco }
+  - { symbol: NU, name: Nubank }
+  - { symbol: PBR, name: Petrobras }
+  - { symbol: CIG, name: Cemig }
+  - { symbol: ARCO, name: Arcos Dorados }
+  - { symbol: VIV, name: Telefônica Brasil }
+  - { symbol: VINP, name: Vinci Compass }
+  - { symbol: ELPC, name: Copel }
+  - { symbol: ABEV, name: Ambev }
+  - { symbol: TIMB, name: TIM Brasil }
+  - { symbol: AFYA, name: Afya }
+  - { symbol: MELI, name: MercadoLibre }
+  - { symbol: SID, ticker: CSN, name: CSN }
+  - { symbol: BSBR, name: Santander Brasil }
+  - { symbol: UGP, name: Ultrapar }
+  - { symbol: GGB, name: Gerdau }
+  - { symbol: VALE, name: Vale }
+  - { symbol: EMBJ, ticker: EMBR, name: Embraer }
+  - { symbol: SUZ, name: Suzano }
