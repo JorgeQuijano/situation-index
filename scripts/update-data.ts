@@ -1,9 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
-import { loadConfigs } from "./lib/config";
-import { calculateIndex } from "./lib/calc";
+import { loadBenchmarkConfigs, loadConfigs } from "./lib/config";
+import { alignQuoteSeries, calculateIndex } from "./lib/calc";
 import { fetchChart, sleep } from "./lib/yahoo";
 import type {
+  BenchmarkFile,
   Health,
   HealthFailure,
   IndexDetail,
@@ -17,11 +18,15 @@ const INDEX_DIR = path.join(OUT_DIR, "indexes");
 async function main() {
   const generatedAt = new Date().toISOString();
   const configs = loadConfigs();
+  const benchmarkConfigs = loadBenchmarkConfigs();
   const minBackfillStart = configs
     .map((config) => config.backfillStart)
     .sort()[0];
 
   console.log(`Situation Index — updating ${configs.length} indexes`);
+  console.log(
+    `Benchmark proxies: ${benchmarkConfigs.map((benchmark) => benchmark.symbol).join(", ")}`,
+  );
   console.log(`Backfill from ${minBackfillStart}`);
 
   const quotes = new Map<string, Quote>();
@@ -52,6 +57,7 @@ async function main() {
         ...config.constituents.map((constituent) => constituent.symbol),
         ...config.benchmarks,
       ]),
+      ...benchmarkConfigs.map((benchmark) => benchmark.symbol),
     ]),
   ).sort((a, b) => {
     if (a === master!.symbol) return -1;
@@ -131,9 +137,35 @@ async function main() {
   console.log(`Master calendar: ${masterDates[0]} → ${asOf}`);
   fs.mkdirSync(INDEX_DIR, { recursive: true });
 
+  const benchmarkWarnings: string[] = [];
+  const benchmarkFile: BenchmarkFile = {
+    generatedAt,
+    asOf,
+    dates: masterDates,
+    benchmarks: benchmarkConfigs.map((benchmark) => {
+      const quote = quotes.get(benchmark.symbol);
+      if (!quote) {
+        benchmarkWarnings.push(
+          `${benchmark.symbol}: benchmark proxy has no price data`,
+        );
+      }
+      return {
+        ...benchmark,
+        levels: quote
+          ? alignQuoteSeries(quote, masterDates)
+          : new Array<number | null>(masterDates.length).fill(null),
+      };
+    }),
+  };
+  fs.writeFileSync(
+    path.join(OUT_DIR, "benchmarks.json"),
+    JSON.stringify(benchmarkFile),
+  );
+  console.log(`Benchmark file: ${benchmarkFile.benchmarks.length} proxies`);
+
   const indexes: Manifest["indexes"] = [];
   const details: IndexDetail[] = [];
-  const warnings: string[] = [];
+  const warnings: string[] = [...benchmarkWarnings];
 
   for (const config of configs) {
     const configDates = masterDates.filter(

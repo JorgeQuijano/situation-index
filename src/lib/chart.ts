@@ -268,10 +268,23 @@ export function periodReturn(
   };
 }
 
-export type CompareSeries = {
-  slug: string;
+export type CompareInput = {
+  id: string;
   name: string;
   color: string;
+  dates: string[];
+  levels: Array<number | null>;
+  coverageStart: string;
+  kind: "index" | "benchmark";
+  dashed?: boolean;
+};
+
+export type CompareSeries = {
+  id: string;
+  name: string;
+  color: string;
+  kind: "index" | "benchmark";
+  dashed?: boolean;
 };
 
 export type CompareBundle = {
@@ -284,29 +297,27 @@ export type CompareBundle = {
 };
 
 export function buildCompareData(
-  details: IndexDetail[],
-  slugs: string[],
+  inputs: CompareInput[],
+  selectedIds: string[],
   range: RangeKey,
   normalization: "range" | "inception",
+  asOf: string,
 ): CompareBundle {
-  const selected = details.filter((detail) => slugs.includes(detail.slug));
+  const selected = inputs.filter((input) => selectedIds.includes(input.id));
   if (!selected.length) {
     return {
       dates: [],
       data: [],
       series: [],
       startDate: "",
-      asOf: "",
+      asOf,
       normalization,
     };
   }
 
-  const asOf = selected[0].meta.asOf;
   let target: string;
   if (range === "MAX") {
-    target = selected
-      .map((detail) => detail.coverageStart)
-      .sort()[0];
+    target = selected.map((input) => input.coverageStart).sort()[0];
   } else if (range === "YTD") {
     target = `${asOf.slice(0, 4)}-01-01`;
   } else {
@@ -315,30 +326,34 @@ export function buildCompareData(
 
   const dateSet = new Set<string>();
   const maps = new Map<string, Map<string, number>>();
-  for (const detail of selected) {
+  for (const input of selected) {
     const map = new Map<string, number>();
-    for (let i = 0; i < detail.dates.length; i += 1) {
-      const date = detail.dates[i];
+    for (let i = 0; i < input.dates.length; i += 1) {
+      const date = input.dates[i];
       if (date < target || date > asOf) continue;
-      if (date < detail.coverageStart) continue;
-      const level = detail.levels[i];
+      if (date < input.coverageStart) continue;
+      const level = input.levels[i];
       if (level == null) continue;
       map.set(date, level);
       dateSet.add(date);
     }
-    maps.set(detail.slug, map);
+    maps.set(input.id, map);
   }
 
   const dates = Array.from(dateSet).sort();
+  const series = selected.map((input) => ({
+    id: input.id,
+    name: input.name,
+    color: input.color,
+    kind: input.kind,
+    dashed: input.dashed,
+  }));
+
   if (!dates.length) {
     return {
       dates: [],
       data: [],
-      series: selected.map((detail) => ({
-        slug: detail.slug,
-        name: detail.name,
-        color: detail.color,
-      })),
+      series,
       startDate: target,
       asOf,
       normalization,
@@ -346,12 +361,12 @@ export function buildCompareData(
   }
 
   const starts = new Map<string, number>();
-  for (const detail of selected) {
-    const map = maps.get(detail.slug)!;
+  for (const input of selected) {
+    const map = maps.get(input.id)!;
     for (const date of dates) {
       const value = map.get(date);
       if (value != null) {
-        starts.set(detail.slug, value);
+        starts.set(input.id, value);
         break;
       }
     }
@@ -359,15 +374,15 @@ export function buildCompareData(
 
   const data = dates.map((date) => {
     const row: Record<string, number | string | null> = { date };
-    for (const detail of selected) {
-      const value = maps.get(detail.slug)!.get(date) ?? null;
+    for (const input of selected) {
+      const value = maps.get(input.id)!.get(date) ?? null;
       if (value == null) {
-        row[detail.slug] = null;
-      } else if (normalization === "range") {
-        const start = starts.get(detail.slug);
-        row[detail.slug] = start ? (value / start) * 100 : value;
+        row[input.id] = null;
+      } else if (normalization === "range" || input.kind === "benchmark") {
+        const start = starts.get(input.id);
+        row[input.id] = start ? (value / start) * 100 : value;
       } else {
-        row[detail.slug] = value;
+        row[input.id] = value;
       }
     }
     return row;
@@ -376,11 +391,7 @@ export function buildCompareData(
   return {
     dates,
     data,
-    series: selected.map((detail) => ({
-      slug: detail.slug,
-      name: detail.name,
-      color: detail.color,
-    })),
+    series,
     startDate: dates[0],
     asOf,
     normalization,

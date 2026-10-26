@@ -201,6 +201,13 @@ P = close in USD for price return`}
                 the provider layer is isolated, so a Tiingo or other fallback
                 can be added without changing the index math.
               </p>
+              <p>
+                The compare page also loads a small <code>benchmarks.json</code>{" "}
+                file with total-return ETF proxies for the S&amp;P 500 (SPY),
+                Nasdaq 100 (QQQ), Dow Jones (DIA), Russell 2000 (IWM) and MSCI
+                ACWI (ACWI). Those lines are dashed and always rebased at the
+                selected range start.
+              </p>
             </div>
           </section>
 

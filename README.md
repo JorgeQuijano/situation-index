@@ -6,6 +6,10 @@ A personal market terminal for tracking **custom equal-weight baskets** built ar
 
 ![Situation Index terminal](docs/screenshot.png)
 
+The Compare view includes major-market ETF proxies — **S&P 500 (SPY)**, **Nasdaq 100 (QQQ)**, **Dow Jones (DIA)**, **Russell 2000 (IWM)** and **MSCI ACWI (ACWI)**. Benchmarks are dashed on the chart and always rebased at the selected range start.
+
+![Compare against market benchmarks](docs/compare.png)
+
 ## What is in here
 
 - **Neocloud Meltdown** — debt markets shut off for companies without revenue independent of AI data centers; consolidation of 200+ neoclouds.
@@ -43,6 +47,7 @@ scripts/update-data.ts      ← fetch EOD bars, calculate indexes
         ▼
 public/data/manifest.json   ← homepage summaries
 public/data/indexes/*.json  ← full series + constituents
+public/data/benchmarks.json ← SPY / QQQ / DIA / IWM / ACWI series
         │
         ▼
 GitHub Actions              ← daily refresh + commit + build + deploy

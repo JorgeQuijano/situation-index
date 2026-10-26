@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T02:30:37.211Z",
+  "generatedAt": "2026-10-26T03:09:20.149Z",
   "asOf": "2026-10-23",
   "indexes": [
     {
@@ -1124,11 +1124,11 @@
     }
   ],
   "health": {
-    "lastRun": "2026-10-26T02:30:37.211Z",
+    "lastRun": "2026-10-26T03:09:20.149Z",
     "asOf": "2026-10-23",
     "source": "Yahoo Finance",
     "indexCount": 10,
-    "symbolCount": 219,
+    "symbolCount": 222,
     "failures": [],
     "warnings": []
   }

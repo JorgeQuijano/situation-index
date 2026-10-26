@@ -290,6 +290,12 @@ function findCoverageStart(coverage: number[], threshold: number) {
   return first >= 0 ? first : 0;
 }
 
+export function alignQuoteSeries(quote: Quote, masterDates: string[]) {
+  return alignBars(quote.bars, masterDates, "adjClose").values.map((value) =>
+    value == null ? null : Math.round(value * 10_000) / 10_000,
+  );
+}
+
 function perfAt(
   levels: Array<number | null>,
   dates: string[],

@@ -193,6 +193,23 @@ export type IndexDetail = {
   };
 };
 
+export type BenchmarkConfig = {
+  symbol: string;
+  name: string;
+  color: string;
+};
+
+export type BenchmarkSeries = BenchmarkConfig & {
+  levels: Array<number | null>;
+};
+
+export type BenchmarkFile = {
+  generatedAt: string;
+  asOf: string;
+  dates: string[];
+  benchmarks: BenchmarkSeries[];
+};
+
 export type HealthFailure = {
   symbol: string;
   message: string;

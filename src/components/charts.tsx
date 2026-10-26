@@ -457,8 +457,11 @@ function CompareTooltip({
       <div className="mt-1.5 space-y-1">
         {rows.map((entry) => {
           const series = bundle.series.find(
-            (item) => item.slug === entry.dataKey,
+            (item) => item.id === entry.dataKey,
           );
+          const color = series
+            ? indexColorForTheme(series.color, resolved)
+            : colors.amber;
           return (
             <div
               key={String(entry.dataKey)}
@@ -466,12 +469,16 @@ function CompareTooltip({
             >
               <span className="flex items-center gap-1.5 text-muted">
                 <span
-                  className="inline-block h-1.5 w-1.5"
-                  style={{
-                    background: series
-                      ? indexColorForTheme(series.color, resolved)
-                      : colors.amber,
-                  }}
+                  className={
+                    series?.dashed
+                      ? "inline-block h-0 w-3 border-t border-dashed"
+                      : "inline-block h-1.5 w-1.5"
+                  }
+                  style={
+                    series?.dashed
+                      ? { borderColor: color }
+                      : { background: color }
+                  }
                 />
                 {series?.name ?? entry.dataKey}
               </span>
@@ -500,7 +507,7 @@ export function CompareChart({
   if (!bundle.data.length) {
     return (
       <div className={classNames("flex items-center justify-center text-[11px] text-muted", heightClass)}>
-        Select at least one index.
+        Select at least one basket or benchmark.
       </div>
     );
   }
@@ -556,12 +563,13 @@ export function CompareChart({
             />
             {bundle.series.map((series) => (
               <Line
-                key={series.slug}
+                key={series.id}
                 type="monotone"
-                dataKey={series.slug}
+                dataKey={series.id}
                 name={series.name}
                 stroke={indexColorForTheme(series.color, resolved)}
-                strokeWidth={1.5}
+                strokeWidth={series.dashed ? 1.1 : 1.5}
+                strokeDasharray={series.dashed ? "4 3" : undefined}
                 dot={false}
                 activeDot={{ r: 3, strokeWidth: 0 }}
                 connectNulls={false}
@@ -573,12 +581,22 @@ export function CompareChart({
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-[8px] uppercase tracking-[0.08em] text-muted">
         {bundle.series.map((series) => (
-          <span key={series.slug} className="flex items-center gap-1.5">
+          <span key={series.id} className="flex items-center gap-1.5">
             <span
-              className="inline-block h-[2px] w-4"
-              style={{
-                background: indexColorForTheme(series.color, resolved),
-              }}
+              className={
+                series.dashed
+                  ? "inline-block h-0 w-4 border-t border-dashed"
+                  : "inline-block h-[2px] w-4"
+              }
+              style={
+                series.dashed
+                  ? {
+                      borderColor: indexColorForTheme(series.color, resolved),
+                    }
+                  : {
+                      background: indexColorForTheme(series.color, resolved),
+                    }
+              }
             />
             {series.name}
           </span>
@@ -586,7 +604,7 @@ export function CompareChart({
         <span className="ml-auto text-dim">
           {bundle.normalization === "range"
             ? "Rebased at first available in range"
-            : "100 = own inception"}
+            : "Indexes at own inception · benchmarks at range start"}
         </span>
       </div>
     </div>

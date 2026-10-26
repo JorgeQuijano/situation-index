@@ -1,0 +1,6 @@
+benchmarks:
+  - { symbol: SPY, name: S&P 500, color: "#e5e7eb" }
+  - { symbol: QQQ, name: Nasdaq 100, color: "#93c5fd" }
+  - { symbol: DIA, name: Dow Jones, color: "#fca5a5" }
+  - { symbol: IWM, name: Russell 2000, color: "#86efac" }
+  - { symbol: ACWI, name: MSCI ACWI, color: "#fde68a" }

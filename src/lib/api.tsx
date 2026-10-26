@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import type { IndexDetail, Manifest } from "./types";
+import type { BenchmarkFile, IndexDetail, Manifest } from "./types";
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -28,6 +28,10 @@ export function getManifest(signal?: AbortSignal) {
 
 export function getIndexDetail(slug: string, signal?: AbortSignal) {
   return getJson<IndexDetail>(`data/indexes/${slug}.json`, signal);
+}
+
+export function getBenchmarkFile(signal?: AbortSignal) {
+  return getJson<BenchmarkFile>("data/benchmarks.json", signal);
 }
 
 type ManifestContextValue = {
@@ -114,6 +118,31 @@ export function useIndexDetail(slug: string | null | undefined) {
   }, [slug]);
 
   return { detail, loading, error };
+}
+
+export function useBenchmarkFile() {
+  const [data, setData] = useState<BenchmarkFile | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+    setError(null);
+    getBenchmarkFile(controller.signal)
+      .then((file) => {
+        setData(file);
+        setLoading(false);
+      })
+      .catch((cause: unknown) => {
+        if (controller.signal.aborted) return;
+        setError(cause instanceof Error ? cause.message : "Unknown error");
+        setLoading(false);
+      });
+    return () => controller.abort();
+  }, []);
+
+  return { data, loading, error };
 }
 
 export function useIndexDetails(slugs: string[] | null) {

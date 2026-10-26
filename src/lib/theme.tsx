@@ -142,6 +142,11 @@ export function indexColorForTheme(color: string, theme: ResolvedTheme) {
     "#facc15": "#8a6d00",
     "#a3e635": "#4d7c0f",
     "#38bdf8": "#0369a1",
+    "#e5e7eb": "#4b5563",
+    "#93c5fd": "#2563a8",
+    "#fca5a5": "#b42318",
+    "#86efac": "#047857",
+    "#fde68a": "#8a6d00",
   };
   return map[color.toLowerCase()] ?? color;
 }

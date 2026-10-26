@@ -2,10 +2,19 @@ import fs from "node:fs";
 import path from "node:path";
 import { parse } from "yaml";
 import type {
+  BenchmarkConfig,
   IndexConfig,
   NormalizedConstituent,
   RawIndexConfig,
 } from "../../src/lib/types";
+
+type RawBenchmarkFile = {
+  benchmarks?: Array<{
+    symbol?: string;
+    name?: string;
+    color?: string;
+  }>;
+};
 
 const DEFAULT_COLORS = ["#ffb000", "#2dd4bf", "#c084fc", "#60a5fa", "#f472b6"];
 
@@ -46,6 +55,32 @@ function normalizeConstituent(
     ticker,
     name: raw.name ?? ticker,
   };
+}
+
+export function loadBenchmarkConfigs(
+  file = path.join(process.cwd(), "data/benchmarks.yml"),
+): BenchmarkConfig[] {
+  if (!fs.existsSync(file)) return [];
+  const raw = parse(fs.readFileSync(file, "utf8")) as RawBenchmarkFile;
+  if (!Array.isArray(raw.benchmarks) || raw.benchmarks.length === 0) {
+    throw new Error(`${file}: benchmarks is required`);
+  }
+
+  const seen = new Set<string>();
+  return raw.benchmarks.map((benchmark, index) => {
+    if (!benchmark.symbol) {
+      throw new Error(`${file}: benchmark ${index + 1} is missing a symbol`);
+    }
+    if (seen.has(benchmark.symbol)) {
+      throw new Error(`${file}: duplicate benchmark ${benchmark.symbol}`);
+    }
+    seen.add(benchmark.symbol);
+    return {
+      symbol: benchmark.symbol,
+      name: benchmark.name ?? benchmark.symbol,
+      color: benchmark.color ?? DEFAULT_COLORS[index % DEFAULT_COLORS.length],
+    };
+  });
 }
 
 export function loadConfigs(dir = path.join(process.cwd(), "data/indexes")) {
