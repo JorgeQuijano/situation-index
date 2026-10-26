@@ -69,7 +69,7 @@ export default function IndexCard({ index }: { index: IndexSummary }) {
               </span>
             )}
           </div>
-          <h3 className="mt-1 truncate font-mono text-[15px] font-medium tracking-[-0.02em] text-ink group-hover:text-amber">
+          <h3 className="mt-1 line-clamp-2 font-mono text-[15px] font-medium leading-[1.15] tracking-[-0.02em] text-ink group-hover:text-amber">
             {index.name}
           </h3>
         </div>

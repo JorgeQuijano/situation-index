@@ -1,0 +1,34 @@
+name: Nvidia's 800VDC Partners
+slug: nvidia-800vdc-partners
+order: 9
+created: 2026-08-17
+inception: 2026-08-17
+backfill_start: 2021-08-17
+min_coverage: 0.6
+benchmark: SMH
+benchmarks:
+  - SMH
+  - SPY
+color: "#a3e635"
+note: Nvidia 800VDC power-delivery ecosystem.
+constituents:
+  - { symbol: 2454.TW, ticker: "2454", name: MediaTek }
+  - { symbol: FLEX, name: Flex }
+  - { symbol: STM, name: STMicroelectronics }
+  - { symbol: 2308.TW, ticker: "2308", name: Delta Electronics }
+  - { symbol: NVTS, name: Navitas Semiconductor }
+  - { symbol: VRT, name: Vertiv }
+  - { symbol: POWI, name: Power Integrations }
+  - { symbol: IFX.DE, ticker: IFX, name: Infineon }
+  - { symbol: 2301.TW, ticker: "2301", name: Lite-On Technology }
+  - { symbol: GEV, name: GE Vernova }
+  - { symbol: TXN, name: Texas Instruments }
+  - { symbol: MPWR, name: Monolithic Power }
+  - { symbol: AOSL, name: Alpha & Omega Semiconductor }
+  - { symbol: ON, name: ON Semiconductor }
+  - { symbol: 3665.TW, ticker: "3665", name: BizLink }
+  - { symbol: ADI, name: Analog Devices }
+  - { symbol: ETN, name: Eaton }
+  - { symbol: ABBNY, ticker: ABBN, name: ABB }
+  - { symbol: SU.PA, ticker: SU, name: Schneider Electric }
+  - { symbol: SIE.DE, ticker: SIE, name: Siemens }

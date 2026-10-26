@@ -1,0 +1,63 @@
+name: The 5 Layers of AI
+slug: five-layers-of-ai
+order: 7
+created: 2026-09-07
+inception: 2026-09-08
+backfill_start: 2021-09-08
+min_coverage: 0.6
+benchmark: QQQ
+benchmarks:
+  - QQQ
+  - SPY
+color: "#f472b6"
+note: "The five layers of AI: silicon, memory, networking, power and applications."
+constituents:
+  - { symbol: SNDK, name: Sandisk }
+  - { symbol: AEHR, name: Aehr Test Systems }
+  - { symbol: DELL, name: Dell Technologies }
+  - { symbol: AXTI, name: AXT }
+  - { symbol: MU, name: Micron }
+  - { symbol: STX, name: Seagate }
+  - { symbol: BE, name: Bloom Energy }
+  - { symbol: WDC, name: Western Digital }
+  - { symbol: NBIS, name: Nebius }
+  - { symbol: MRVL, name: Marvell }
+  - { symbol: INTC, name: Intel }
+  - { symbol: LITE, name: Lumentum }
+  - { symbol: DOCN, name: DigitalOcean }
+  - { symbol: ARM, name: Arm }
+  - { symbol: HPE, name: Hewlett Packard Enterprise }
+  - { symbol: FCEL, name: FuelCell Energy }
+  - { symbol: FSLY, name: Fastly }
+  - { symbol: GLW, name: Corning }
+  - { symbol: VICR, name: Vicor }
+  - { symbol: VRT, name: Vertiv }
+  - { symbol: NVTS, name: Navitas Semiconductor }
+  - { symbol: DDOG, name: Datadog }
+  - { symbol: SNOW, name: Snowflake }
+  - { symbol: ASML, name: ASML }
+  - { symbol: COHR, name: Coherent }
+  - { symbol: PWR, name: Quanta Services }
+  - { symbol: GEV, name: GE Vernova }
+  - { symbol: NET, name: Cloudflare }
+  - { symbol: TSM, name: TSMC }
+  - { symbol: GTLB, name: GitLab }
+  - { symbol: NVDA, name: Nvidia }
+  - { symbol: CRWV, name: CoreWeave }
+  - { symbol: IREN, name: IREN }
+  - { symbol: AMZN, name: Amazon }
+  - { symbol: CCJ, name: Cameco }
+  - { symbol: FPS, name: Forgent Power Solutions }
+  - { symbol: GOOGL, name: Alphabet }
+  - { symbol: SKHY, name: SK hynix }
+  - { symbol: APLD, name: Applied Digital }
+  - { symbol: AVGO, name: Broadcom }
+  - { symbol: UEC, name: Uranium Energy }
+  - { symbol: PLTR, name: Palantir }
+  - { symbol: META, name: Meta }
+  - { symbol: NOW, name: ServiceNow }
+  - { symbol: SPCX, name: SpaceX }
+  - { symbol: VST, name: Vistra }
+  - { symbol: BWXT, name: BWX Technologies }
+  - { symbol: CEG, name: Constellation Energy }
+  - { symbol: ORCL, name: Oracle }

@@ -11,6 +11,13 @@ A personal market terminal for tracking **custom equal-weight baskets** built ar
 - **Neocloud Meltdown** — debt markets shut off for companies without revenue independent of AI data centers; consolidation of 200+ neoclouds.
 - **Brazil Stocks** — Brazil equities basket (US-listed ADRs).
 - **Photonics** — photonics, optical components and semiconductor equipment.
+- **Biotech** — biotech and life-science tools.
+- **Cybersecurity** — security platforms, identity and network security.
+- **Copper Stocks** — copper miners and producers.
+- **The 5 Layers of AI** — silicon, memory, networking, power and applications.
+- **Peter Thiel's Portfolio** — disclosed portfolio basket.
+- **Nvidia's 800VDC Partners** — the 800VDC power-delivery ecosystem.
+- **SpaceX Beneficiaries** — SpaceX suppliers and adjacent space/defense exposure.
 
 The seed lists come from Lin [@speculator_io](https://x.com/speculator_io) and are tracked here for personal research. This project is not affiliated with him.
 
@@ -48,7 +55,7 @@ The update workflow runs **daily after the US close** — `00:30 UTC` Tuesday–
 - Equal weight, daily rebalanced, in USD.
 - Base 100 at the **base date** (`inception`, or the next trading session).
 - **Total return** uses adjusted close (dividends and splits included); **price return** uses close. Both are stored.
-- Foreign listings are converted with daily FX (`EURUSD`, `GBPUSD`, `SEKUSD`). Pence (`GBp`) is divided by 100 before conversion.
+- Foreign listings are converted with daily FX (`EURUSD`, `GBPUSD`, `SEKUSD`, `TWDUSD`). Pence (`GBp`) is divided by 100 before conversion.
 - The pre-inception line is a **simulated backfill** using today's constituents, drawn dashed and labelled as such. The live line starts at the base date.
 - The **MAX** range starts at `coverage_start`: the first date where at least 60% of the basket has data for ten consecutive sessions. This keeps a thin 2021 backfill from masquerading as the whole basket.
 

@@ -1,0 +1,34 @@
+name: SpaceX Beneficiaries
+slug: spacex-beneficiaries
+order: 10
+created: 2026-06-20
+inception: 2026-06-22
+backfill_start: 2021-06-22
+min_coverage: 0.6
+benchmark: ARKX
+benchmarks:
+  - ARKX
+  - SPY
+color: "#38bdf8"
+note: SpaceX suppliers and adjacent space/defense exposure.
+constituents:
+  - { symbol: BE, name: Bloom Energy }
+  - { symbol: DELL, name: Dell Technologies }
+  - { symbol: STM, name: STMicroelectronics }
+  - { symbol: CPSH, name: CPS Technologies }
+  - { symbol: VELO, name: Velo3D }
+  - { symbol: FLTCF, name: Filtronic }
+  - { symbol: VRT, name: Vertiv }
+  - { symbol: TXN, name: Texas Instruments }
+  - { symbol: CSTM, name: Constellium }
+  - { symbol: ATI, name: ATI }
+  - { symbol: CAT, name: Caterpillar }
+  - { symbol: GEV, name: GE Vernova }
+  - { symbol: HXL, name: Hexcel }
+  - { symbol: ANET, name: Arista Networks }
+  - { symbol: APH, name: Amphenol }
+  - { symbol: NVDA, name: Nvidia }
+  - { symbol: SMCI, name: Super Micro Computer }
+  - { symbol: TEL, name: TE Connectivity }
+  - { symbol: TSLA, name: Tesla }
+  - { symbol: ACM, name: AECOM }

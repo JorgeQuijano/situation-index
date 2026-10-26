@@ -97,9 +97,9 @@ P = close in USD for price return`}
                 photonics and neocloud baskets.
               </p>
               <p>
-                Foreign listings are converted to USD using the daily EUR/USD,
-                GBP/USD and SEK/USD rates. <code>IQE.L</code> quotes in pence,
-                so its price is divided by 100 before the GBP conversion.
+                Foreign listings are converted to USD using daily EUR/USD,
+                GBP/USD, SEK/USD and TWD/USD rates. <code>IQE.L</code> quotes in
+                pence, so its price is divided by 100 before the GBP conversion.
               </p>
             </div>
           </section>
@@ -225,6 +225,14 @@ P = close in USD for price return`}
                   ["ALRIB", "ALRIB.PA"],
                   ["AIXA", "AIXA.DE"],
                   ["XFAB", "XFAB.PA"],
+                  ["2454", "2454.TW"],
+                  ["2308", "2308.TW"],
+                  ["2301", "2301.TW"],
+                  ["3665", "3665.TW"],
+                  ["IFX", "IFX.DE"],
+                  ["ABBN", "ABBNY"],
+                  ["SU", "SU.PA"],
+                  ["SIE", "SIE.DE"],
                 ].map(([display, symbol]) => (
                   <div
                     key={display}

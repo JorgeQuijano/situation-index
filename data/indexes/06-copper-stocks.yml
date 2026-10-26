@@ -1,0 +1,25 @@
+name: Copper Stocks
+slug: copper-stocks
+order: 6
+created: 2026-09-09
+inception: 2026-09-09
+backfill_start: 2021-09-09
+min_coverage: 0.6
+benchmark: COPX
+benchmarks:
+  - COPX
+  - SPY
+color: "#fb923c"
+note: Copper miners and producers — supply and electrification.
+constituents:
+  - { symbol: TGB, name: Taseko Mines }
+  - { symbol: BHP, name: BHP Group }
+  - { symbol: FCX, name: Freeport-McMoRan }
+  - { symbol: SCCO, name: Southern Copper }
+  - { symbol: TECK, name: Teck Resources }
+  - { symbol: HBM, name: Hudbay Minerals }
+  - { symbol: ERO, name: Ero Copper }
+  - { symbol: COPX, name: Copper Miners ETF }
+  - { symbol: RIO, name: Rio Tinto }
+  - { symbol: CMCL, name: Caledonia Mining }
+  - { symbol: IE, name: Ivanhoe Electric }

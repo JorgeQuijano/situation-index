@@ -1,0 +1,22 @@
+name: Peter Thiel's Portfolio
+slug: peter-thiel-portfolio
+order: 8
+created: 2026-08-23
+inception: 2026-08-24
+backfill_start: 2021-08-24
+min_coverage: 0.6
+benchmark: SPY
+benchmarks:
+  - SPY
+  - QQQ
+color: "#facc15"
+note: Peter Thiel's disclosed portfolio basket.
+constituents:
+  - { symbol: AMZN, name: Amazon }
+  - { symbol: VIST, name: Vista Energy }
+  - { symbol: VST, name: Vistra }
+  - { symbol: AEP, name: American Electric Power }
+  - { symbol: DTE, name: DTE Energy }
+  - { symbol: FE, name: FirstEnergy }
+  - { symbol: CMS, name: CMS Energy }
+  - { symbol: XE, name: X-Energy }

@@ -1,0 +1,33 @@
+name: Biotech
+slug: biotech
+order: 4
+created: 2026-09-17
+inception: 2026-09-17
+backfill_start: 2021-09-17
+min_coverage: 0.6
+benchmark: XBI
+benchmarks:
+  - XBI
+  - SPY
+color: "#34d399"
+note: Biotech and life-science tools basket.
+constituents:
+  - { symbol: ABSI, name: AbSci }
+  - { symbol: TEM, name: Tempus AI }
+  - { symbol: TWST, name: Twist Bioscience }
+  - { symbol: BHVN, name: Biohaven }
+  - { symbol: BFLY, name: Butterfly Network }
+  - { symbol: CRSP, name: CRISPR Therapeutics }
+  - { symbol: ABCL, name: AbCellera }
+  - { symbol: NTLA, name: Intellia Therapeutics }
+  - { symbol: MRNA, name: Moderna }
+  - { symbol: CMPS, name: COMPASS Pathways }
+  - { symbol: TXG, name: 10x Genomics }
+  - { symbol: ALMR, name: Alamar Biosciences }
+  - { symbol: ILMN, name: Illumina }
+  - { symbol: BLLN, name: BillionToOne }
+  - { symbol: BRKR, name: Bruker }
+  - { symbol: NTRA, name: Natera }
+  - { symbol: EDIT, name: Editas Medicine }
+  - { symbol: NEO, name: NeoGenomics }
+  - { symbol: MBX, name: MBX Biosciences }

@@ -1,0 +1,34 @@
+name: Cybersecurity
+slug: cybersecurity
+order: 5
+created: 2026-09-14
+inception: 2026-09-14
+backfill_start: 2021-09-14
+min_coverage: 0.6
+benchmark: CIBR
+benchmarks:
+  - CIBR
+  - SPY
+color: "#60a5fa"
+note: Cybersecurity platforms, identity and network security.
+constituents:
+  - { symbol: OKTA, name: Okta }
+  - { symbol: FTNT, name: Fortinet }
+  - { symbol: PANW, name: Palo Alto Networks }
+  - { symbol: CRWD, name: CrowdStrike }
+  - { symbol: NET, name: Cloudflare }
+  - { symbol: FFIV, name: F5 }
+  - { symbol: S, name: SentinelOne }
+  - { symbol: HACK, name: Amplify Cybersecurity ETF }
+  - { symbol: TENB, name: Tenable }
+  - { symbol: ATEN, name: A10 Networks }
+  - { symbol: VRNS, name: Varonis }
+  - { symbol: CIBR, name: First Trust Cybersecurity ETF }
+  - { symbol: RBRK, name: Rubrik }
+  - { symbol: YOU, name: Clear Secure }
+  - { symbol: SAIL, name: SailPoint }
+  - { symbol: BAH, name: Booz Allen Hamilton }
+  - { symbol: ZS, name: Zscaler }
+  - { symbol: RPD, name: Rapid7 }
+  - { symbol: PSN, name: Parsons }
+  - { symbol: CHKP, name: Check Point }

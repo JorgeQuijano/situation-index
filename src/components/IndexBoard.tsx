@@ -43,7 +43,7 @@ export default function IndexBoard({
         <span className="text-right">SI</span>
       </div>
 
-      <div className="divide-y divide-line">
+      <div className="max-h-[340px] divide-y divide-line overflow-y-auto">
         {indexes.map((index) => {
           const selected = selectedSlug === index.slug;
           const content = (
@@ -108,7 +108,9 @@ export default function IndexBoard({
       </div>
 
       <div className="border-t border-line px-3 py-2 font-mono text-[8px] uppercase tracking-[0.08em] text-dim">
-        Selected basket drives the featured chart
+        {indexes.length > 6
+          ? `${indexes.length} baskets · scroll board to select`
+          : "Selected basket drives the featured chart"}
       </div>
     </section>
   );

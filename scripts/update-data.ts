@@ -88,7 +88,8 @@ async function main() {
         );
       }
     }
-    if (!result.cached) await sleep(450);
+    if (!result.cached) await sleep(700);
+    if (!result.cached && i > 0 && i % 50 === 0) await sleep(2_000);
   }
 
   const currencies = Array.from(
@@ -110,7 +111,7 @@ async function main() {
       failures.push({ symbol: pair, message: result.error ?? "no data" });
       console.warn(`  FX ${pair} FAILED: ${result.error}`);
     }
-    if (!result.cached) await sleep(450);
+    if (!result.cached) await sleep(700);
   }
 
   if (fxQuotes.size !== currencies.length) {
