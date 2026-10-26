@@ -41,7 +41,7 @@ public/data/indexes/*.json  ← full series + constituents
 GitHub Actions              ← daily refresh + commit + build + deploy
 ```
 
-The update workflow runs after the US close (`00:30 UTC` Tuesday–Saturday) and on manual dispatch. It fetches daily bars from Yahoo Finance, writes compact JSON, commits the change and deploys the static site. A data failure keeps the last committed data and fails the run after deployment, so the site does not disappear.
+The update workflow runs **daily after the US close** — `00:30 UTC` Tuesday–Saturday, which is Monday–Friday evening in New York. (`2-6` is the day-of-week field in the cron, not a weekly interval.) It also runs on manual dispatch. It fetches daily bars from Yahoo Finance, writes compact JSON, commits the change and deploys the static site. A data failure keeps the last committed data and fails the run after deployment, so the site does not disappear.
 
 ## Index method
 

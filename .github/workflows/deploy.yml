@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
   schedule:
-    # After the US close. UTC Tue-Sat = Mon-Fri evening in New York.
+    # Daily, after the US close. 00:30 UTC Tue-Sat = Mon-Fri evening in New York.
+    # The 2-6 is the day-of-week field (Tue-Sat UTC), not a weekly interval.
     - cron: "30 0 * * 2-6"
   workflow_dispatch:
 
