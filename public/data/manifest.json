@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T06:50:23.513Z",
-  "asOf": "2026-11-03",
+  "generatedAt": "2026-11-05T07:10:27.638Z",
+  "asOf": "2026-11-04",
   "indexes": [
     {
       "slug": "neocloud-meltdown",
@@ -26,29 +26,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 7,
+      "liveDays": 8,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 102.13,
-          "dayPct": 0.105829,
-          "sincePct": 0.021251,
-          "ytdPct": -0.057839,
-          "oneYearPct": -0.41012,
+          "level": 95.18,
+          "dayPct": -0.06801,
+          "sincePct": -0.048204,
+          "ytdPct": -0.121915,
+          "oneYearPct": -0.410778,
           "simulatedYtd": true
         },
         "price": {
-          "level": 102.13,
-          "dayPct": 0.105829,
-          "sincePct": 0.021251,
-          "ytdPct": -0.058366,
-          "oneYearPct": -0.410449,
+          "level": 95.18,
+          "dayPct": -0.06801,
+          "sincePct": -0.048204,
+          "ytdPct": -0.122406,
+          "oneYearPct": -0.411107,
           "simulatedYtd": true
         }
       },
       "spark": [
-        156.373,
         169.195,
         165.261,
         169.568,
@@ -107,7 +106,8 @@
         109.232,
         99.768,
         92.352,
-        102.125
+        102.125,
+        95.18
       ],
       "health": {
         "missing": [],
@@ -138,65 +138,64 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 21,
+      "liveDays": 22,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 76.7,
-          "dayPct": -0.012502,
-          "sincePct": -0.232967,
-          "ytdPct": -0.100016,
-          "oneYearPct": -0.109279,
+          "level": 78.97,
+          "dayPct": 0.029549,
+          "sincePct": -0.210302,
+          "ytdPct": -0.073434,
+          "oneYearPct": -0.074842,
           "simulatedYtd": true
         },
         "price": {
-          "level": 76.6,
-          "dayPct": -0.012502,
-          "sincePct": -0.234012,
-          "ytdPct": -0.126469,
-          "oneYearPct": -0.140184,
+          "level": 78.86,
+          "dayPct": 0.029533,
+          "sincePct": -0.21139,
+          "ytdPct": -0.100671,
+          "oneYearPct": -0.106931,
           "simulatedYtd": true
         }
       },
       "spark": [
-        84.533,
-        84.154,
-        84.434,
-        84.319,
-        83.828,
-        82.828,
-        84.325,
-        83.45,
-        85.844,
-        86.93,
-        88.089,
-        87.634,
-        87.297,
-        86.981,
-        87.924,
-        89.457,
-        92.8,
-        93.569,
-        92.601,
-        93.329,
-        92.168,
-        93.857,
-        93.07,
-        91.703,
-        90.943,
-        90.764,
-        91.017,
-        89.778,
-        91.358,
-        91.633,
-        89.263,
-        87.936,
-        87.806,
-        86.176,
-        85.974,
-        87.339,
-        86.915,
+        84.155,
+        84.435,
+        84.32,
+        83.829,
+        82.829,
+        84.326,
+        83.451,
+        85.845,
+        86.931,
+        88.091,
+        87.636,
+        87.298,
+        86.982,
+        87.925,
+        89.459,
+        92.801,
+        93.57,
+        92.602,
+        93.33,
+        92.169,
+        93.858,
+        93.072,
+        91.704,
+        90.944,
+        90.765,
+        91.018,
+        89.78,
+        91.359,
+        91.634,
+        89.264,
+        87.938,
+        87.807,
+        86.177,
+        85.975,
+        87.34,
+        86.916,
         88.992,
         100,
         101.111,
@@ -219,7 +218,8 @@
         79.581,
         77.787,
         77.674,
-        76.703
+        76.703,
+        78.97
       ],
       "health": {
         "missing": [],
@@ -250,29 +250,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 21,
+      "liveDays": 22,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 70.04,
-          "dayPct": 0.036484,
-          "sincePct": -0.299647,
-          "ytdPct": 1.021315,
-          "oneYearPct": 1.169352,
+          "level": 66.36,
+          "dayPct": -0.053608,
+          "sincePct": -0.336424,
+          "ytdPct": 0.915174,
+          "oneYearPct": 1.13468,
           "simulatedYtd": true
         },
         "price": {
-          "level": 70.03,
-          "dayPct": 0.036484,
-          "sincePct": -0.299651,
-          "ytdPct": 1.01704,
-          "oneYearPct": 1.164228,
+          "level": 66.36,
+          "dayPct": -0.053608,
+          "sincePct": -0.336427,
+          "ytdPct": 0.911123,
+          "oneYearPct": 1.129637,
           "simulatedYtd": true
         }
       },
       "spark": [
-        93.836,
         98.411,
         97.159,
         98.756,
@@ -331,7 +330,8 @@
         77.168,
         70.998,
         67.57,
-        70.035
+        70.116,
+        66.358
       ],
       "health": {
         "missing": [],
@@ -362,29 +362,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 33,
+      "liveDays": 34,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 96.02,
-          "dayPct": 0.03104,
-          "sincePct": -0.039807,
-          "ytdPct": 1.307115,
-          "oneYearPct": 1.286098,
+          "level": 97.85,
+          "dayPct": 0.019027,
+          "sincePct": -0.021537,
+          "ytdPct": 1.351012,
+          "oneYearPct": 1.408032,
           "simulatedYtd": true
         },
         "price": {
-          "level": 96.02,
-          "dayPct": 0.03104,
-          "sincePct": -0.039848,
-          "ytdPct": 1.306714,
-          "oneYearPct": 1.285574,
+          "level": 97.84,
+          "dayPct": 0.019027,
+          "sincePct": -0.021579,
+          "ytdPct": 1.350604,
+          "oneYearPct": 1.407481,
           "simulatedYtd": true
         }
       },
       "spark": [
-        83.297,
         83.723,
         83.049,
         82.392,
@@ -443,7 +442,8 @@
         107.079,
         99.312,
         93.129,
-        96.019
+        96.019,
+        97.846
       ],
       "health": {
         "missing": [],
@@ -474,29 +474,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 36,
+      "liveDays": 37,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 102.78,
-          "dayPct": 0.005977,
-          "sincePct": 0.027831,
-          "ytdPct": 0.462847,
-          "oneYearPct": 0.325392,
+          "level": 104.51,
+          "dayPct": 0.016799,
+          "sincePct": 0.045098,
+          "ytdPct": 0.487422,
+          "oneYearPct": 0.389129,
           "simulatedYtd": true
         },
         "price": {
-          "level": 102.78,
-          "dayPct": 0.005977,
-          "sincePct": 0.027829,
-          "ytdPct": 0.459446,
-          "oneYearPct": 0.321195,
+          "level": 104.51,
+          "dayPct": 0.016799,
+          "sincePct": 0.045096,
+          "ytdPct": 0.483964,
+          "oneYearPct": 0.38473,
           "simulatedYtd": true
         }
       },
       "spark": [
-        97.226,
         96.484,
         100.282,
         97.724,
@@ -555,7 +554,8 @@
         110.648,
         107.227,
         102.172,
-        102.783
+        102.783,
+        104.51
       ],
       "health": {
         "missing": [],
@@ -586,29 +586,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 39,
+      "liveDays": 40,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 79.55,
-          "dayPct": -0.009799,
-          "sincePct": -0.204525,
-          "ytdPct": 0.081096,
-          "oneYearPct": 0.266078,
+          "level": 81.98,
+          "dayPct": 0.030566,
+          "sincePct": -0.18021,
+          "ytdPct": 0.114141,
+          "oneYearPct": 0.367246,
           "simulatedYtd": true
         },
         "price": {
-          "level": 79.52,
-          "dayPct": -0.009799,
-          "sincePct": -0.204778,
-          "ytdPct": 0.067886,
-          "oneYearPct": 0.247269,
+          "level": 81.95,
+          "dayPct": 0.030566,
+          "sincePct": -0.180471,
+          "ytdPct": 0.100527,
+          "oneYearPct": 0.346934,
           "simulatedYtd": true
         }
       },
       "spark": [
-        94.262,
         93.839,
         90.765,
         90.276,
@@ -667,7 +666,8 @@
         84.607,
         79.86,
         80.335,
-        79.547
+        79.547,
+        81.979
       ],
       "health": {
         "missing": [],
@@ -698,29 +698,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 40,
+      "liveDays": 41,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 81.82,
-          "dayPct": 0.039819,
-          "sincePct": -0.181776,
-          "ytdPct": 0.70212,
-          "oneYearPct": 0.598182,
+          "level": 77.35,
+          "dayPct": -0.054718,
+          "sincePct": -0.226548,
+          "ytdPct": 0.608984,
+          "oneYearPct": 0.589761,
           "simulatedYtd": true
         },
         "price": {
-          "level": 81.79,
-          "dayPct": 0.039819,
-          "sincePct": -0.182096,
-          "ytdPct": 0.698881,
-          "oneYearPct": 0.594255,
+          "level": 77.32,
+          "dayPct": -0.054718,
+          "sincePct": -0.22685,
+          "ytdPct": 0.605921,
+          "oneYearPct": 0.585855,
           "simulatedYtd": true
         }
       },
       "spark": [
-        96.323,
         100.796,
         101.668,
         102.734,
@@ -779,7 +778,8 @@
         89.384,
         82.728,
         78.689,
-        81.822
+        81.822,
+        77.345
       ],
       "health": {
         "missing": [],
@@ -810,29 +810,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 50,
+      "liveDays": 51,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 95.63,
-          "dayPct": 0.012066,
-          "sincePct": -0.043706,
-          "ytdPct": 0.026734,
-          "oneYearPct": -0.025089,
+          "level": 93.06,
+          "dayPct": -0.026908,
+          "sincePct": -0.069438,
+          "ytdPct": -0.000894,
+          "oneYearPct": -0.043414,
           "simulatedYtd": true
         },
         "price": {
-          "level": 95.5,
-          "dayPct": 0.012066,
-          "sincePct": -0.044974,
-          "ytdPct": 0.01281,
-          "oneYearPct": -0.043171,
+          "level": 92.93,
+          "dayPct": -0.026908,
+          "sincePct": -0.070672,
+          "ytdPct": -0.014443,
+          "oneYearPct": -0.061156,
           "simulatedYtd": true
         }
       },
       "spark": [
-        102.461,
         102.549,
         104.153,
         104.014,
@@ -891,7 +890,8 @@
         96.513,
         95.427,
         94.489,
-        95.629
+        95.629,
+        93.056
       ],
       "health": {
         "missing": [],
@@ -922,29 +922,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 55,
+      "liveDays": 56,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 83.63,
-          "dayPct": 0.019781,
-          "sincePct": -0.163661,
-          "ytdPct": 0.520266,
-          "oneYearPct": 0.462398,
+          "level": 80.98,
+          "dayPct": -0.0319,
+          "sincePct": -0.190238,
+          "ytdPct": 0.471956,
+          "oneYearPct": 0.475384,
           "simulatedYtd": true
         },
         "price": {
-          "level": 83.53,
-          "dayPct": 0.019781,
-          "sincePct": -0.164734,
-          "ytdPct": 0.506023,
-          "oneYearPct": 0.44741,
+          "level": 80.87,
+          "dayPct": -0.0319,
+          "sincePct": -0.191277,
+          "ytdPct": 0.458165,
+          "oneYearPct": 0.460264,
           "simulatedYtd": true
         }
       },
       "spark": [
-        98.846,
         99.475,
         98.744,
         99.645,
@@ -1003,7 +1002,8 @@
         86.946,
         82.371,
         82.012,
-        83.634
+        83.644,
+        80.976
       ],
       "health": {
         "missing": [],
@@ -1034,29 +1034,28 @@
       "missingCount": 0,
       "staleCount": 0,
       "coveragePct": 1,
-      "liveDays": 94,
+      "liveDays": 95,
       "status": "live",
       "latest": {
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "total": {
-          "level": 79.45,
-          "dayPct": 0.023729,
-          "sincePct": -0.205455,
-          "ytdPct": 0.489817,
-          "oneYearPct": 0.503295,
+          "level": 77.33,
+          "dayPct": -0.026709,
+          "sincePct": -0.226676,
+          "ytdPct": 0.450026,
+          "oneYearPct": 0.520255,
           "simulatedYtd": true
         },
         "price": {
-          "level": 79.28,
-          "dayPct": 0.023729,
-          "sincePct": -0.207161,
-          "ytdPct": 0.482965,
-          "oneYearPct": 0.495955,
+          "level": 77.17,
+          "dayPct": -0.026709,
+          "sincePct": -0.228337,
+          "ytdPct": 0.443357,
+          "oneYearPct": 0.512833,
           "simulatedYtd": true
         }
       },
       "spark": [
-        88.405,
         91.001,
         91.231,
         91.587,
@@ -1115,7 +1114,8 @@
         82.145,
         78.316,
         77.613,
-        79.455
+        79.455,
+        77.332
       ],
       "health": {
         "missing": [],
@@ -1124,8 +1124,8 @@
     }
   ],
   "health": {
-    "lastRun": "2026-11-04T06:50:23.513Z",
-    "asOf": "2026-11-03",
+    "lastRun": "2026-11-05T07:10:27.638Z",
+    "asOf": "2026-11-04",
     "source": "Yahoo Finance",
     "indexCount": 10,
     "symbolCount": 222,
