@@ -1,9 +1,11 @@
 {
-  "lastRun": "2026-11-27T08:54:59.816Z",
-  "asOf": "2026-11-25",
+  "lastRun": "2026-11-28T08:16:04.558Z",
+  "asOf": "2026-11-27",
   "source": "Yahoo Finance",
   "indexCount": 10,
   "symbolCount": 222,
   "failures": [],
-  "warnings": []
+  "warnings": [
+    "five-layers-of-ai: 1 constituent stale"
+  ]
 }
